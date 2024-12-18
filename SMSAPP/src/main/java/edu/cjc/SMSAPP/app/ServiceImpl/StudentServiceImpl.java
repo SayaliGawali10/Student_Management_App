@@ -55,6 +55,17 @@ public class StudentServiceImpl implements StudentService {
 		sr.deleteById(id);
 	}
 
+	@Override
+	public List<Student> updateStudentBatch(int studentid, String batchNumber) {
+		Student s=sr.findById(studentid).get();
+	    s.setBatchNumber(batchNumber);
+		sr.save(s);
+		return (List<Student>) sr.findAll();
+		
+	}
+
+	
+
 	
 	
 	

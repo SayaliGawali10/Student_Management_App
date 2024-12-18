@@ -18,4 +18,8 @@ public interface StudentService {
 	public List<Student> updateStudentFees(int studentid, float ammount);
 	
 	public void removeDelete(int id);
+
+	public List<Student> updateStudentBatch(int studentid, String batchNumber);
+	
+	
 }

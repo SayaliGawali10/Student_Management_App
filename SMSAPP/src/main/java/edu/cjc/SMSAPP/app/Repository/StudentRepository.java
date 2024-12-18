@@ -10,6 +10,7 @@ import edu.cjc.SMSAPP.app.Model.Student;
 @Repository
 public interface StudentRepository extends CrudRepository<Student, Integer>  {
 
-	List<Student> findAllByBatchNumber(String batchNumber);
+	public List<Student> findAllByBatchNumber(String batchNumber);
+	
 
 }

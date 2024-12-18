@@ -88,5 +88,22 @@ public class AdminController {
 		
 	}
 	
+	@RequestMapping("/batch")
+	public String onBatchChange(@RequestParam  int id, Model m) {
+		Student st=ss.getSingleStudent(id);
+		List<Student> list=ss.getAllStudents();
+		m.addAttribute("st", st);
+		m.addAttribute("data", list);
+		return "batch";
+	}
+	
+	@RequestMapping("/batchshift")
+	public String batchShift(@RequestParam("studentid") int studentid, @RequestParam("batchNumber") String batchNumber, Model m) {
+		
+		List<Student> students=ss.updateStudentBatch(studentid, batchNumber);
+		m.addAttribute("data", students);
+		return "adminscreen";
+		
+	}
 	
 }
