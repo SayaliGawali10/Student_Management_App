@@ -256,7 +256,5 @@ name="batchNumber">
      </table> 
  </section> 
   
-  
-  
 </body>
 </html>
